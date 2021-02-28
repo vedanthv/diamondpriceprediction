@@ -1,0 +1,4 @@
+seaborn
+pandas==1.1.5
+streamlit==0.74.1
+scikit_learn==0.24.1
