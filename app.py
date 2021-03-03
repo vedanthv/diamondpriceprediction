@@ -22,6 +22,7 @@ with videoExplanation:
     st.header("Video Explanation of the Project")
     st.write("Here is an overview of my project in my own words")
     st.video("https://www.youtube.com/watch?v=8jazNUpO3lQ")
+
 # Data Source 
 with dataSource:
     st.header("Data Sources")
@@ -29,19 +30,23 @@ with dataSource:
     st.write("Let's read the data and take a sneak peek at it")
     diamonds_data = pd.read_csv('diamonds.csv')
     st.write(diamonds_data.head(5))
+
 # Data Exploration
 with dataExploration:
-    st.header("Let's Explore Our Data!")
-    st.write("In this section let us explore our data!")
-    diamonds_data = diamonds_data[:500] #Taking a subset of our data
-    fig = sns.pairplot(diamonds_data)
-    st.pyplot(fig)
+  st.header("Let's Explore Our Data!")
+  st.write("In this section let us explore our data!")
+  diamonds_data = diamonds_data[:1000] #Taking a subset of our data
+  fig = sns.pairplot(diamonds_data)
+  st.pyplot(fig)
 
 # Model Building
 with modelTraining:
     st.header("Model Training")
+
     st.write("In this part we are going to take the input parameters fromt the user for out model, train the model and test it!")
+
     diamonds_data = pd.read_csv("diamonds.csv")
+
     new_diamonds_data = pd.read_csv("new_diamonds.csv")
 
     new_diamonds_data = pd.get_dummies(new_diamonds_data, columns=['cut', 'color','clarity'])
@@ -51,7 +56,9 @@ with modelTraining:
 
     # Let's List the features that the user can input to the model
     selection_col.text('Here is a list of features: ')
+
     selection_col.write(diamonds_data.columns)
+
     input_feature = selection_col.text_input('Which feature would you like to input to the model?', 'carat')  
 
     # Let user input max depth of the model
@@ -77,7 +84,7 @@ with modelTraining:
 
     new_diamonds_data['price'] = prediction
     
-    st.write(new_diamonds_data.head(5))
+    st.write(new_diamonds_data[['carat','price']].head(5))
 
 
 
@@ -91,6 +98,7 @@ with linreg:
 
 #Importing our data
 new_diamonds = pd.read_csv("new_diamonds.csv")
+
 diamonds = pd.read_csv("diamonds.csv")
 
 #Converting to Dummy Variables
@@ -103,6 +111,7 @@ clf = linear_model.LinearRegression()
 
 
 Y = diamonds.price #Target
+
 X = diamonds.drop("price", axis=1) #Predictor
 
 clf.fit(X,Y) #Training

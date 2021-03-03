@@ -2,6 +2,7 @@ Deploying Our Application on Streamlit!
 
 1. Create an acocunt
 https://streamlit.io/sharing
+You will have to sign in from GitHub
 You have to request for an invite from streamlit that will be in your inbox in a couple of days.
 
 2. Put your code on GitHub 
@@ -10,3 +11,12 @@ https://github.com/vedanthv/DIamondPricePrediction
 3. Adding a requirements.txt file to tell Streamlit which packages you are using in your project.
 pip install pipreqs
 pipreqs filelocation [current file ./]
+
+4. Go to Streamlit Account and click 'New App'
+Enter URL of Your Repo and select the main file of your project. In my case its app.py
+
+Click deploy and wait for a couple of minutes.
+
+Sample Application : https://share.streamlit.io/vedanthv/diamondpriceprediction/main/app.py
+
+Share it with your friends and put in on your resume!

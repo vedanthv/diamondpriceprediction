@@ -12,6 +12,7 @@ st.write("Let's follow the approach from the Udacity Course and use a linear reg
 
 #Importing our data
 new_diamonds = pd.read_csv("new_diamonds.csv")
+
 diamonds = pd.read_csv("diamonds.csv")
 
 #Converting to Dummy Variables
@@ -24,6 +25,7 @@ clf = linear_model.LinearRegression()
 
 
 Y = diamonds.price #Target
+
 X = diamonds.drop("price", axis=1) #Predictor
 
 clf.fit(X,Y) #Training

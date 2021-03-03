@@ -4,6 +4,7 @@
 import streamlit as st
 import seaborn as sns
 import pandas as pd
+import matplotlib.pyplot as plt
 
 dataSource = st.beta_container()
 dataExploration = st.beta_container()
@@ -21,5 +22,4 @@ with dataExploration:
     st.write("In this section let us explore our data!")
     diamonds_data = diamonds_data[:1000] #Taking a subset of our data
     fig = sns.pairplot(diamonds_data)
-    st.pyplot(fig)
-
+    st.pyplot(fig)  

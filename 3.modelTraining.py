@@ -4,7 +4,6 @@ import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 
-
 # Importing data
 diamonds_data = pd.read_csv("diamonds.csv")
 new_diamonds_data = pd.read_csv("new_diamonds.csv")
@@ -13,15 +12,19 @@ new_diamonds_data = pd.get_dummies(new_diamonds_data, columns=['cut', 'color','c
 
 # Model Training
 modelTraining = st.beta_container()
+
 with modelTraining:
      st.header("Model Training")
      st.write("In this part we are going to take the input parameters fromt the user for out model, train the model and test it!")
+
     # Make Two Columns
      selection_col, display_col = st.beta_columns(2)
 
     # Let's List the features that the user can input to the model
      selection_col.text('Here is a list of features: ')
+
      selection_col.write(diamonds_data.columns)
+
      input_feature = selection_col.text_input('Which feature would you like to input to the model?', 'carat')  
 
     # Let user input max depth of the model
@@ -37,7 +40,7 @@ with modelTraining:
 
      model = RandomForestRegressor(max_depth=max_depth, 
     n_estimators=number_of_trees)    
-
+     
      
      X = diamonds_data[[input_feature]] # Predictor Variables    
      y = diamonds_data[['price']] # Target Vraiable
@@ -47,5 +50,5 @@ with modelTraining:
 
      new_diamonds_data['price'] = prediction
     
-     st.write(new_diamonds_data.head(5))
+     st.write(new_diamonds_data[['carat','price']].head(5))
 

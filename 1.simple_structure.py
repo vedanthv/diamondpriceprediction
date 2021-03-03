@@ -9,11 +9,8 @@
 # installing pandas - pip install pandas
 # installing seaborn - pip install seaborn
 
-# Importing streamlit and a few other libraries
+# Importing streamlit
 import streamlit as st
-import pandas as pd
-import seaborn as sns
-
 
 # Building our frontend interface
 
@@ -47,7 +44,7 @@ with modelTraining:
 
 #Linear Regression Method
 with linreg:
-    st.header("Linear Regression Moel")
+    st.header("Linear Regression Model")
     st.write("Now let's use the Linear Regression model and compare the results with the result we got in the challenge course")
 
 
