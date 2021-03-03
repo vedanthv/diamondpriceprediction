@@ -38,14 +38,14 @@ with dataSource:
     st.write(diamonds_data.head(5))
     st.write("The description of  the dataset")
     st.write(diamonds_data.describe())
-# # Data Exploration
-# with dataExploration:
-#     st.header("Let's Explore Our Data!")
-#     st.write("In this section let us explore our data!")
-#     diamonds_data = pd.read_csv('diamonds.csv')
+# Data Exploration
+with dataExploration:
+    st.header("Let's Explore Our Data!")
+    st.write("In this section let us explore our data!")
+    diamonds_data = pd.read_csv('diamonds.csv')
 
-#     fig = sns.pairplot(diamonds_data)
-#     st.pyplot(fig)
+    fig = sns.pairplot(diamonds_data)
+    st.pyplot(fig)
 
 # Model Building
 with modelTraining:
