@@ -8,6 +8,7 @@ from sklearn.ensemble import RandomForestRegressor
 diamonds_data = pd.read_csv("diamonds.csv")
 new_diamonds_data = pd.read_csv("new_diamonds.csv")
 
+
 new_diamonds_data = pd.get_dummies(new_diamonds_data, columns=['cut', 'color','clarity'])
 
 # Model Training
@@ -25,7 +26,7 @@ with modelTraining:
 
      selection_col.write(diamonds_data.columns)
 
-     input_feature = selection_col.text_input('Which feature would you like to input to the model?', 'carat')  
+     input_feature = selection_col.text_input('Which feature would you like to input to the model?', 'carat')  # carat is the default value
 
     # Let user input max depth of the model
      max_depth = st.slider("What should be the max_depth of the model?", 
@@ -40,7 +41,7 @@ with modelTraining:
 
      model = RandomForestRegressor(max_depth=max_depth, 
     n_estimators=number_of_trees)    
-     
+
      
      X = diamonds_data[[input_feature]] # Predictor Variables    
      y = diamonds_data[['price']] # Target Vraiable
