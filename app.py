@@ -44,9 +44,6 @@ with dataExploration:
     st.write("In this section let us explore our data!")
     diamonds_data = pd.read_csv('diamonds.csv')
 
-    fig = sns.pairplot(diamonds_data)
-    st.pyplot(fig)
-
 # Model Building
 with modelTraining:
     st.header("Model Training")
