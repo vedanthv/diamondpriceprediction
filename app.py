@@ -1,4 +1,5 @@
 # Importing streamlit and a few other libraries
+import scipy.stats
 import streamlit as st
 import pandas as pd
 import seaborn as sns
