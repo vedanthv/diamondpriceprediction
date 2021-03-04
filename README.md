@@ -3,7 +3,7 @@
 # Preview
 
 
-![caption](appp_preview.gif)
+![caption](app_preview.gif)
 
 
 
