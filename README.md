@@ -1,5 +1,13 @@
 # DiamondPricePredictionProject
 
+# Preview
+
+
+https://user-images.githubusercontent.com/44313631/109969571-13d0ba00-7d1a-11eb-80af-ecf7d0ad8e76.mp4
+
+
+
+
 In this project we will be predicting the bid price for the diamonds from a dataset that was part of the Udacity Bertelsmann Data Track Final Project.
 
 # How to learn from this repository?
@@ -22,3 +30,5 @@ Now you have to create a requirements.txt file that will let Streamlit know whic
 6. Once you can see the contents of your app, you can use the URL and share it with your friends :)
 
 If you liked this repo and the Study Jam Webinar, considering giving the repo a star!
+
+
