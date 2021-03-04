@@ -4,9 +4,6 @@
 import streamlit as st
 import seaborn as sns
 import pandas as pd
-from pandas_profiling import ProfileReport
-
-from streamlit_pandas_profiling import st_profile_report # Component that helps RENDER reports
 
 dataSource = st.beta_container()
 dataExploration = st.beta_container()
@@ -30,9 +27,7 @@ with dataSource:
 
     st.write("In this section let us explore our data!")
     
-    profile = ProfileReport(diamonds_data) # Generaing the report
-    st_profile_report(profile) # Actually displaying it on screen
-
+  
 
 # PLOTS IN SEABORN WORKS IN VERSIONS STREAMLIT 0.77 AND BELOW. SINCE MINE IS 0.77 VERSION I CAN'T SHOW THE PLOT RIGHT NOW :(
 
