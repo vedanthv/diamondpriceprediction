@@ -50,7 +50,7 @@ with dataExploration:
     st.header("Let's Explore Our Data!")
     st.write("In this section let us explore our data!")
     diamonds_data = pd.read_csv('diamonds.csv')
-
+    #Note pandas profiling does not work properly on streamlit sharing because of system conflicts!
     profile = ProfileReport(diamonds_data) # Generaing the report
     st_profile_report(profile) # Actually displaying it on screen
 
