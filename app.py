@@ -25,7 +25,7 @@ with siteHeader:
 with videoExplanation:
     st.header("Video Explanation of the Project")
     st.write("Here is an overview of my project in my own words")
-    st.video("https://www.youtube.com/watch?v=8jazNUpO3lQ")
+    st.video("https://www.youtube.com/watch?v=DBBpLrhKzC8")
 
 # Data Source 
 with dataSource:
