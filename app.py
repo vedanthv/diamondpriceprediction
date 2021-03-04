@@ -47,7 +47,7 @@ with dataExploration:
     st.header("Let's Explore Our Data!")
     st.write("In this section let us explore our data!")
     diamonds_data = pd.read_csv('diamonds.csv')
-# Note 
+# Note : This does not work on Streamlit sharing as of now. But I am going to fix it
 #     profile = ProfileReport(diamonds_data) # Generaing the report
 #     st_profile_report(profile) # Actually displaying it on screen
     
