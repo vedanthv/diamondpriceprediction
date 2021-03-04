@@ -45,10 +45,7 @@ with dataExploration:
     st.write("In this section let us explore our data!")
     diamonds_data = pd.read_csv('diamonds.csv')
 
-    # Gives 2 values co relation co-efficient and p-value
     
-    st.write("Co relation co efficient and p value of carat v/s price",scipy.stats.pearsonr(diamonds_data['carat'],diamonds_data['price']))
-
     diamonds = pd.read_csv('diamonds.csv')
 
     diamonds = pd.get_dummies(diamonds, columns=['cut', 'color','clarity']) #Just like the select tool in Alteryx
