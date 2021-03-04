@@ -54,8 +54,8 @@ with dataExploration:
 #     profile = ProfileReport(diamonds_data) # Generaing the report
 #     st_profile_report(profile) # Actually displaying it on screen
 
-#     fig = sns.pairplot(diamonds_data)
-#     st.pyplot(fig)
+    fig = sns.pairplot(diamonds_data)
+    st.pyplot(fig)
 
 # Model Building
 with modelTraining:
