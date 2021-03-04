@@ -1,7 +1,7 @@
 # In this part we will be 
 # 1. Installing streamlit
 # 2. Importing streamlit and other python packages
-# 3. Building a really simple Frontend application and running it locally!
+# 3. Building a really simple Frontend skeleton and running it locally!
 
 # Installing streamlit
 # in the terminal type pip install streamlit

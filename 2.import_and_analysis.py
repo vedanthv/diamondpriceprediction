@@ -28,6 +28,8 @@ with dataSource:
     st.write("The description of  the dataset")
     st.write(diamonds_data.describe())
 
+    st.write("In this section let us explore our data!")
+    
     profile = ProfileReport(diamonds_data) # Generaing the report
     st_profile_report(profile) # Actually displaying it on screen
 
@@ -42,3 +44,6 @@ with dataExploration:
 
     fig = sns.pairplot(diamonds_data)
     st.pyplot(fig)
+
+    st.subheader("Conclusion!")
+    st.write('carat has a linear relation with price so it can be a good input for our linear regression model')
