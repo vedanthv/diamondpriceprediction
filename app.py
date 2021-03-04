@@ -21,13 +21,13 @@ with siteHeader:
 
 # Video Explanation
 with videoExplanation:
-    st.header("Video Explanation of the Project")
+    st.title("Video Explanation of the Project")
     st.write("Here is an overview of my project in my own words")
     st.video("https://www.youtube.com/watch?v=_9WiB2PDO7k")
 
 # Data Source 
 with dataSource:
-    st.header("Data Sources")
+    st.title("Data Sources")
     st.write("In this project we are going to use two data sources. These are going to be diamonds.csv and new_diamonds.csv from the Udacity Challenge Course")
 
     st.write("Let's read the data and take a sneak peek at it")
@@ -43,7 +43,7 @@ with dataSource:
 # Data Exploration
 #Data Exploration
 with dataExploration:
-    st.header("Let's Explore Our Data!")
+    st.title("Let's Explore Our Data!")
     st.write("In this section let us explore our data!")
     diamonds_data = pd.read_csv('diamonds.csv')
 
@@ -66,7 +66,7 @@ with dataExploration:
     st.pyplot(fig)
     
 
-    st.subheader("Conclusion!")
+    st.title("Conclusion!")
     st.write('carat has a linear relation with price so it can be a good input for our linear regression model, has a low p value and a high corelation and can be used as input feature for our model')
 # Model Building
 with modelTraining:
@@ -121,7 +121,7 @@ with modelTraining:
 
 # Predicting Prices for our new_diamonds.csv
 with linreg:
-    st.header("Let's Follow the approach from the Udacity course")
+    st.title("Let's Follow the approach from the Udacity course")
 
     st.write("Let's follow the approach from the Udacity Course and use a linear regressor model")
 
