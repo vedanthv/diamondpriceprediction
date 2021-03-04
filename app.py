@@ -4,6 +4,10 @@ import pandas as pd
 import seaborn as sns
 from sklearn.ensemble import RandomForestRegressor
 from sklearn import linear_model
+from pandas_profiling import ProfileReport
+
+from streamlit_pandas_profiling import st_profile_report # Component that helps RENDER reports
+
 
 siteHeader = st.beta_container()
 videoExplanation = st.beta_container()
@@ -38,14 +42,17 @@ with dataSource:
     st.write(diamonds_data.head(5))
     st.write("The description of  the dataset")
     st.write(diamonds_data.describe())
-# # Data Exploration
-# with dataExploration:
-#     st.header("Let's Explore Our Data!")
-#     st.write("In this section let us explore our data!")
-#     diamonds_data = pd.read_csv('diamonds.csv')
+# Data Exploration
+with dataExploration:
+    st.header("Let's Explore Our Data!")
+    st.write("In this section let us explore our data!")
+    diamonds_data = pd.read_csv('diamonds.csv')
 
-#     fig = sns.pairplot(diamonds_data)
-#     st.pyplot(fig)
+    profile = ProfileReport(diamonds_data) # Generaing the report
+    st_profile_report(profile) # Actually displaying it on screen
+    
+    fig = sns.pairplot(diamonds_data)
+    st.pyplot(fig)
 
 # Model Building
 with modelTraining:
