@@ -108,9 +108,25 @@ In the below line we are creating a text box where the user can enter the featur
 
 ```input_feature = selection_col.text_input('Which feature would you like to input to the model?', 'carat')```
 
+This line of code allows the user to select the max depth of the model.<br><br>
+```max_depth = st.slider("What should be the max_depth of the model?",min_value=10, max_value=100, value=20, step=10)```
+<br>
+This code allows the user to select either 100,200 or 300 treed for the model with the default being 100.<br>
+```number_of_trees = st.selectbox('How many trees should there be?',                            options=[100, 200, 300],index=0)```
+<br>
+Now let's create the create the RandomForestRegressor class using sklearn.
+```model = RandomForestRegressor(max_depth=max_depth,n_estimators=number_of_trees)```
 
+We are taking the input feature to be he one user has chosen and the target as the price.
 
+Model.fit is used to train our model. <br>
+Basically instruct the model about what are the price values for the carat calues.
+```model.fit(X, y)```<br>
 
+Finally we are using the trained model to predict the price values for the new_diamonds dataset!
+```prediction = model.predict(
+new_diamonds_data[[input_feature]])
+```
 
 # To deploy the app do the following steps
 
