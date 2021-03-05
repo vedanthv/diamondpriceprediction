@@ -87,10 +87,8 @@ Next we are going to use the Random Forest Model and the Linear Regression Model
 
 You can find explanations of the Decision tree and Random Forest Models here:
 
-[Decision Tree]('https://towardsdatascience.com/machine-learning-basics-decision-tree-regression-1d73ea003fda')
-
-[Random Forest]('https://towardsdatascience.com/machine-learning-basics-random-forest-regression-be3e1e3bb91a')
-
+<a href = "https://towardsdatascience.com/machine-learning-basics-decision-tree-regression-1d73ea003fda">Decision Trees</a>
+<a href = "https://towardsdatascience.com/machine-learning-basics-random-forest-regression-be3e1e3bb91a ">Random Forest</a>
 You can find an example of the decision tree model for carat v/s price in ```decisiontree.png``` in above file structure.
 
 The line ```from sklearn.ensemble import RandomForestRegressor``` 
